@@ -133,3 +133,29 @@ let n = Number(prompt("Give your number here "))
 // }
 // console.log("5th Fibonacci number: ", nthFibonacci(5)); // Output: 5
 
+// ========================================================
+// 8. Find Greatest Common Divisor (GCD) / HCF
+// Description:
+// Find the largest positive integer that divides both a and b without a remainder.
+// Explanation:
+// - We use the Euclidean algorithm, which is highly efficient.
+// - The algorithm repeatedly replaces the larger number by the remainder of dividing the larger by the smaller.
+// - We use a while loop that continues as long as b is not 0.
+// - In each step, we temporarily store b, update b to a % b, and update a to the temporary b.
+// - When b becomes 0, a contains the GCD.
+
+// function findGCD(a, b) {
+//     a = Math.abs(a);
+//     b = Math.abs(b);
+//     
+//     while (b !== 0) {
+//         let temp = b;
+//         b = a % b;
+//         a = temp;
+//     }
+//     
+//     return a;
+// }
+// console.log("GCD of 48 and 18: ", findGCD(48, 18)); // Output: 6
+
+// module.exports = { calculatePower, isStrongNumber, reverseNumber, nthFibonacci, findGCD };

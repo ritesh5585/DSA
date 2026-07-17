@@ -25,18 +25,18 @@ let n = Number(prompt("Give your number here "))
 //     return "Prime"
 // }
 
-// console.log(isPrime(n))
+// console.log(isPrime(n))  
 
 //================================================================
 
 // function calculatePower(a, b) {
 //     // Write your logic here
 //     // 0^0 is Undefined
-//     if (a === 0 && b === 0) return "Undefined";
+//     if (a === 0 && b === 0) return "Undefined"; 
 
 //     // Loop for exponent
 //     let result = 1;
-//     for (let i = 0; i < Math.abs(b); i++) {
+//     for (let i = 0; i < Math.abs(b); i++) { 
 //         result *= a;
 //     }
 
@@ -76,7 +76,7 @@ let n = Number(prompt("Give your number here "))
 
 // }
 
-// module.exports = { isStrongNumber };
+// module.exports = { isStrongNumber };    
 
 // ========================================================
 // 6. Reverse a Number
@@ -103,4 +103,33 @@ let n = Number(prompt("Give your number here "))
 //     return isNegative ? -reversed : reversed;
 // }
 // console.log("Reversed 1234: ", reverseNumber(1234));
+
+// ========================================================
+// 7. Fibonacci Sequence
+// Description:
+// Print the n-th Fibonacci number. The Fibonacci sequence starts with 0 and 1,
+// and each subsequent number is the sum of the previous two (0, 1, 1, 2, 3, 5, 8...).
+// Explanation:
+// - We handle the base cases for n=0 and n=1.
+// - We use a loop starting from 2 up to n.
+// - We maintain two variables (a and b) representing the two previous numbers in the sequence.
+// - In each iteration, we calculate the next number (c = a + b), and update a and b.
+
+// function nthFibonacci(n) {
+//     if (n === 0) return 0;
+//     if (n === 1) return 1;
+//     
+//     let a = 0;
+//     let b = 1;
+//     let current = 0;
+//     
+//     for (let i = 2; i <= n; i++) {
+//         current = a + b;
+//         a = b;
+//         b = current;
+//     }
+//     
+//     return current;
+// }
+// console.log("5th Fibonacci number: ", nthFibonacci(5)); // Output: 5
 

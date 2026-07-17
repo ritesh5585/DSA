@@ -25,18 +25,18 @@ let n = Number(prompt("Give your number here "))
 //     return "Prime"
 // }
 
-// console.log(isPrime(n))  
+// console.log(isPrime(n))
 
 //================================================================
 
 // function calculatePower(a, b) {
 //     // Write your logic here
 //     // 0^0 is Undefined
-//     if (a === 0 && b === 0) return "Undefined"; 
+//     if (a === 0 && b === 0) return "Undefined";
 
 //     // Loop for exponent
 //     let result = 1;
-//     for (let i = 0; i < Math.abs(b); i++) { 
+//     for (let i = 0; i < Math.abs(b); i++) {
 //         result *= a;
 //     }
 
@@ -56,25 +56,51 @@ let n = Number(prompt("Give your number here "))
 // strong number, print "Yes". • Otherwise, print
 // "No".
 
-function factorial(num) {
-    let result = 1
-    for (let i = 2; i <= num; i++) {
-        result *= i
-    }
-    return result
-}
-function isStrongNumber(n) {
-    // Write your logic here
-    let sum = 0
+// function factorial(num) {
+//     let result = 1
+//     for (let i = 2; i <= num; i++) {
+//         result *= i
+//     }
+//     return result
+// }
+// function isStrongNumber(n) {
+//     let sum = 0
 
-    let digits = n.toString().split('')
+//     let digits = n.toString().split('')
 
-    for (let digit of digits) {
-        sum += factorial(Number(digit))
-    }
+//     for (let digit of digits) {
+//         sum += factorial(Number(digit))
+//     }
 
-    return sum === n ? "Yes" : "No";
+//     return sum === n ? "Yes" : "No";
 
-}
+// }
 
-module.exports = { isStrongNumber };    
+// module.exports = { isStrongNumber };
+
+// ========================================================
+// 6. Reverse a Number
+// Description:
+// Given a number, write a program to reverse its digits.
+// For example, if the number is 1234, the output should be 4321.
+// Explanation:
+// - We can use a while loop to extract the last digit using modulo 10 (num % 10).
+// - We build the reversed number by multiplying the current reversed number by 10 and adding the extracted digit.
+// - We then remove the last digit from the original number by dividing it by 10 (Math.floor(num / 10)).
+
+// function reverseNumber(num) {
+//     let reversed = 0;
+//     // Handle negative numbers by converting to positive and keeping track
+//     let isNegative = num < 0;
+//     num = Math.abs(num);
+//
+//     while (num > 0) {
+//         let lastDigit = num % 10;
+//         reversed = (reversed * 10) + lastDigit;
+//         num = Math.floor(num / 10);
+//     }
+//
+//     return isNegative ? -reversed : reversed;
+// }
+// console.log("Reversed 1234: ", reverseNumber(1234));
+

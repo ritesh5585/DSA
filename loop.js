@@ -158,8 +158,6 @@ let n = Number(prompt("Give your number here "))
 // }
 // console.log("GCD of 48 and 18: ", findGCD(48, 18)); // Output: 6
 
-// module.exports = { calculatePower, isStrongNumber, reverseNumber, nthFibonacci, findGCD };
-
 //==========================================================
 
 // Sum of Digits of a Number
@@ -169,7 +167,6 @@ let n = Number(prompt("Give your number here "))
 // computes the sum of its digits. • The input number is always
 // positive.
 
-// function sumOfDigits(n) {
 //     // Write your logic here
 //     let digit = n.toString().split('')
 
@@ -177,6 +174,23 @@ let n = Number(prompt("Give your number here "))
 
 //     // console.log(ans)
 //     return ans
-// }
+
 
 // module.exports = { sumOfDigits };
+//===================================================================
+
+// A number is called an Automorphic number if its
+// square ends with the number itself. For example:
+// • 25 is Automorphic because: 25'*2 = 625 • The
+// last two digits are 25 (which matches the
+// number itself). Write a program that accepts a
+// positive integer n and checks whether it is an
+// Automorphic number. • If n is an Automorphic
+// number, print "Yes". • Otherwise, print "No".
+
+//     // Write your logic here
+//     let square = n * n
+//     const num = square.toString().slice(1)
+
+//     if (n == num) return 'Yes'
+//     else return 'No'

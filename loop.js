@@ -25,18 +25,18 @@ let n = Number(prompt("Give your number here "))
 //     return "Prime"
 // }
 
-// console.log(isPrime(n))  
+// console.log(isPrime(n))
 
 //================================================================
 
 // function calculatePower(a, b) {
 //     // Write your logic here
 //     // 0^0 is Undefined
-//     if (a === 0 && b === 0) return "Undefined"; 
+//     if (a === 0 && b === 0) return "Undefined";
 
 //     // Loop for exponent
 //     let result = 1;
-//     for (let i = 0; i < Math.abs(b); i++) { 
+//     for (let i = 0; i < Math.abs(b); i++) {
 //         result *= a;
 //     }
 
@@ -76,7 +76,7 @@ let n = Number(prompt("Give your number here "))
 
 // }
 
-// module.exports = { isStrongNumber };    
+// module.exports = { isStrongNumber };
 
 // ========================================================
 // 6. Reverse a Number
@@ -118,17 +118,17 @@ let n = Number(prompt("Give your number here "))
 // function nthFibonacci(n) {
 //     if (n === 0) return 0;
 //     if (n === 1) return 1;
-//     
+//
 //     let a = 0;
 //     let b = 1;
 //     let current = 0;
-//     
+//
 //     for (let i = 2; i <= n; i++) {
 //         current = a + b;
 //         a = b;
 //         b = current;
 //     }
-//     
+//
 //     return current;
 // }
 // console.log("5th Fibonacci number: ", nthFibonacci(5)); // Output: 5
@@ -147,15 +147,36 @@ let n = Number(prompt("Give your number here "))
 // function findGCD(a, b) {
 //     a = Math.abs(a);
 //     b = Math.abs(b);
-//     
+//
 //     while (b !== 0) {
 //         let temp = b;
 //         b = a % b;
 //         a = temp;
 //     }
-//     
+//
 //     return a;
 // }
 // console.log("GCD of 48 and 18: ", findGCD(48, 18)); // Output: 6
 
 // module.exports = { calculatePower, isStrongNumber, reverseNumber, nthFibonacci, findGCD };
+
+//==========================================================
+
+// Sum of Digits of a Number
+// Easy Loop Digit Arithmetic
+// Description
+// Write a program that takes an integer "n" as input and
+// computes the sum of its digits. • The input number is always
+// positive.
+
+// function sumOfDigits(n) {
+//     // Write your logic here
+//     let digit = n.toString().split('')
+
+//     const ans = digit.reduce((sum, current) => sum + Number(current), 0)
+
+//     // console.log(ans)
+//     return ans
+// }
+
+// module.exports = { sumOfDigits };

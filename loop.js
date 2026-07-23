@@ -194,3 +194,17 @@ let n = Number(prompt("Give your number here "))
 
 //     if (n == num) return 'Yes'
 //     else return 'No'
+//==============================================================
+
+// Reverse a Number
+// Easy Loop Digit Operations
+// Description
+// Write a program that accepts a positive integer
+// "n" as input and return the reverse of the
+// number.
+
+//     // Write your logic here
+//     const num = n.toString().split('')
+//     const rev = num.reverse().join("")
+//     return parseInt(rev)
+// }

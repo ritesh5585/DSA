@@ -208,3 +208,26 @@ let n = Number(prompt("Give your number here "))
 //     const rev = num.reverse().join("")
 //     return parseInt(rev)
 // }
+//=====================================================================
+
+// Harshad Number Check
+// Medium Loops
+// Description
+// Write a program to check whether a given
+// number is a Harshad Number or not. A Harshad
+// Number (or Niven Number) is a number that is
+// divisible by the sum of its digits. For example, 18
+// is a Harshad number because 1 + 8 = 9, and 18 % 9 
+
+//         let sum = 0
+//         let temp = n
+
+//         while( temp > 0) {
+//             sum += temp % 10
+//            temp = Math.floor(temp / 10);
+//         }
+//         if (n % sum === 0) {
+//         return "Harshad Number";
+//     } else {
+//         return "Not Harshad Number";
+//     }

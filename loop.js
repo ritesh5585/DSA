@@ -233,26 +233,40 @@ let n = Number(prompt("Give your number here "))
 //     }
 // =======================================================
 
-let sum = 0
-let temp = n
-let digit = 0
+// let sum = 0
+// let temp = n
+// let digit = 0
 
-digit = n.toString().length // alternatives
+// digit = n.toString().length // alternatives
 
+
+// // while (temp != 0) {
+// //     temp = Math.floor(temp / 10)
+// //     digit++
+// // }
+
+// temp = n
 
 // while (temp != 0) {
+//     let sep = temp % 10
+//     sum += Math.pow(sep, digit)
 //     temp = Math.floor(temp / 10)
-//     digit++
 // }
 
-temp = n
+// if (n === sum) return "Armstrong"
+// else return "Not Armstrong"
 
-while (temp != 0) {
-    let sep = temp % 10
-    sum += Math.pow(sep, digit)
-    temp = Math.floor(temp / 10)
-}
+// ============================================================
 
-if (n === sum) return "Armstrong"
-else return "Not Armstrong"
-
+//  let square = n * n;
+//     let sumOfDigits = 0;
+    
+//     // Step 2: Loop to extract and sum digits
+//     while (square > 0) {
+//         let digit = square % 10;   // Get the last digit
+//         sumOfDigits += digit;      // Add to sum
+//         square = Math.floor(square / 10); // Remove last digit
+//     }
+    
+//     // Step 3: Compare with original number
+//     return sumOfDigits === n;

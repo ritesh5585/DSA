@@ -231,3 +231,26 @@ let n = Number(prompt("Give your number here "))
 //     } else {
 //         return "Not Harshad Number";
 //     }
+// =======================================================
+
+        let sum = 0 
+        let temp = n
+        let digit = 0
+        
+        while (temp != 0) {
+            temp = Math.floor(temp / 10)
+            digit++
+        }
+
+        temp = n
+
+        while (temp != 0) {
+            let sep = temp % 10
+            sum += Math.pow(sep, digit)
+            temp = Math.floor(temp / 10)
+        }
+
+        if (n === sum) return "Armstrong"
+        else return "Not Armstrong"
+
+    

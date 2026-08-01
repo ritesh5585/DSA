@@ -1,7 +1,7 @@
 let prompt = require("prompt-sync")()
 let n = Number(prompt("Give your number here "))
 
-//right anglie triangle start pattern & number
+//right anglie triangle start pattern, number and alphabates
 
 // for (let i = 1; i <= n; i++) {
 //     for (let j = 1; j <= i; j++) {
@@ -9,11 +9,16 @@ let n = Number(prompt("Give your number here "))
 //     }
 //     console.log()
 // }
+// for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= i; j++) {
+//         process.stdout.write(String(j + " "))
+//     }
+//     console.log()
+// }
 for (let i = 1; i <= n; i++) {
     for (let j = 1; j <= i; j++) {
-        process.stdout.write(String(j + " "))
-    }
-    console.log()
+        let letter = String.fromCharCode(64 + j)
+        process.stdout.write(letter + " ")
+    } console.log()
 }
-
 

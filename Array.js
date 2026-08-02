@@ -1,5 +1,11 @@
-let prompt = require("prompt-sync")()
-let arr = Number(prompt("Give your number here "))
+let prompt = require("prompt-sync")();
+let input = prompt("Enter numbers separated by commas: "); // e.g. "1,2,3"
+let arr = input.split(",").map(Number).filter((n) => !Number.isNaN(n));
+
+if (arr.length === 0) {
+    console.log("No valid numbers provided.");
+    process.exit(1);
+}
 
 let sum = 0;
 
@@ -11,5 +17,5 @@ for (let i = 0; i < arr.length; i++) {
 // Calculate mean (average)
 let mean = sum / arr.length;
 
-// Return sum and mean rounded to 1 decimal place
-return [sum, mean.toFixed(1)]; 
+// Print sum and mean rounded to 1 decimal place
+console.log([sum, parseFloat(mean.toFixed(1))]);

@@ -28,6 +28,18 @@ let arr = input.split(",").map(Number).filter((n) => !Number.isNaN(n));
 
 // // Print sum and mean rounded to 1 decimal place
 // console.log([sum, parseFloat(mean.toFixed(1))]);
+// Find the Greatest Element
+
+// let max = arr[0]
+// let index = 0
+
+// for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//         max = arr[i]
+//         index = i
+//     }
+// }
+// return [max, index]
 
 // Find the Second Greatest
 // Element

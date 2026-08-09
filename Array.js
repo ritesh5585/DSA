@@ -6,32 +6,37 @@ const arr = input
     .filter((n) => !Number.isNaN(n));
 // Find the Gretest Number
 
-let maxElement = arr[0];
-let maxIndex = 0;
+// let maxElement = arr[0];
+// let maxIndex = 0;
 
-for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > maxElement) {
-        maxElement = arr[i]; 
-        maxIndex = i; 
-    }
-}
-
-console.log(maxElement, maxIndex)
-
-// function findSecondGreatestElement(numbers) {
-//     let max = -Infinity;
-//     let secondMax = -Infinity;
-
-//     for (let i = 0; i < numbers.length; i++) {
-//         if (numbers[i] > max) {
-//             secondMax = max;
-//             max = numbers[i];
-//         } else if (numbers[i] > secondMax && numbers[i] !== max) {
-//             secondMax = numbers[i];
-//         }
+// for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > maxElement) {
+//         maxElement = arr[i]; 
+//         maxIndex = i; 
 //     }
-
-//     return secondMax
 // }
 
-// console.log(findSecondGreatestElement(arr))
+// console.log(maxElement, maxIndex)
+
+// let max = -Infinity;
+// let secondMax = -Infinity;
+
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//         secondMax = max;
+//         max = arr[i];
+//     } 
+// }
+// console.log(secondMax)
+
+// Reverse the array
+
+let temp = new Array(arr.length)
+
+let i = arr.length - 1
+for (let j = 0; j < temp.length; j++) {
+    temp[j] = arr[i]
+    i--
+}
+console.log(temp)
+

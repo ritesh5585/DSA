@@ -1,58 +1,37 @@
-let prompt = require("prompt-sync")();
-let input = prompt("Enter numbers separated by commas: "); // e.g. "1,2,3"
-let arr = input.split(",").map(Number).filter((n) => !Number.isNaN(n));
+const prompt = require("prompt-sync")();
+const input = prompt("Enter numbers separated by commas: "); // e.g. "1,2,3"
+const arr = input
+    .split(",")
+    .map((value) => Number(value.trim()))
+    .filter((n) => !Number.isNaN(n));
+// Find the Gretest Number
 
-// Calculate Sum and Mean of Array
-// Elements
-// Easy Array
-// Description
-// Write a program that accepts an integer n from the user,
-// creates an array of size n, takes n integer inputs to fill the array,
-// and then calculate and return the sum and mean of the array
-// elements.
+let maxElement = arr[0];
+let maxIndex = 0;
 
-// if (arr.length === 0) {
-//     console.log("No valid numbers provided.");
-//     process.exit(1);
-// }
+for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > maxElement) {
+        maxElement = arr[i]; 
+        maxIndex = i; 
+    }
+}
 
-// let sum = 0;
+console.log(maxElement, maxIndex)
 
-// // Loop through each element
-// for (let i = 0; i < arr.length; i++) {
-//     sum += arr[i];
-// }
-
-// // Calculate mean (average)
-// let mean = sum / arr.length;
-
-// // Print sum and mean rounded to 1 decimal place
-// console.log([sum, parseFloat(mean.toFixed(1))]);
-// Find the Greatest Element
-
-// let max = arr[0]
-// let index = 0
-
-// for (let i = 1; i < arr.length; i++) {
-//     if (arr[i] > max) {
-//         max = arr[i]
-//         index = i
-//     }
-// }
-// return [max, index]
-
-// Find the Second Greatest
-// Element
-
-// let max = arr[0];
+// function findSecondGreatestElement(numbers) {
+//     let max = -Infinity;
 //     let secondMax = -Infinity;
 
-//     for (let i = 1; i < arr.length; i++) {
-
-//         if (arr[i] > max) {
+//     for (let i = 0; i < numbers.length; i++) {
+//         if (numbers[i] > max) {
 //             secondMax = max;
-//             max = arr[i];
-
+//             max = numbers[i];
+//         } else if (numbers[i] > secondMax && numbers[i] !== max) {
+//             secondMax = numbers[i];
 //         }
 //     }
+
 //     return secondMax
+// }
+
+// console.log(findSecondGreatestElement(arr))

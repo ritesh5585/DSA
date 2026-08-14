@@ -4,6 +4,7 @@ const arr = input
     .split(",")
     .map((value) => Number(value.trim()))
     .filter((n) => !Number.isNaN(n));
+
 // Find the Gretest Number
 
 // let maxElement = arr[0];
@@ -31,12 +32,30 @@ const arr = input
 
 // Reverse the array
 
-let temp = new Array(arr.length)
+// let temp = new Array(arr.length)
+// let i = arr.length - 1
 
-let i = arr.length - 1
-for (let j = 0; j < temp.length; j++) {
-    temp[j] = arr[i]
-    i--
+// for (let j = 0; j < temp.length; j++) {
+//     temp[j] = arr[i]
+//     i--
+// }
+// console.log(temp)
+
+// let i = 0, j = arr.length - 1
+// while (i < j) {
+//     let temp = arr[i]
+//     arr[i] = arr[j]
+//     arr[j] = temp
+//     i++
+//     j--
+// }
+// console.log(arr)
+
+// Array Left Rotation by 1
+
+let firstIdx = arr[0]
+
+for (let i = 0; i < arr.length - 1; i++) {
+    arr[i] = arr[i + 1]
 }
-console.log(temp)
-
+arr[arr.length - 1] = firstIdx; 

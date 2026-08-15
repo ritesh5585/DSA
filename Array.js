@@ -53,9 +53,43 @@ const arr = input
 
 // Array Left Rotation by 1
 
-let firstIdx = arr[0]
+// let firstIdx = arr[0]
 
-for (let i = 0; i < arr.length - 1; i++) {
-    arr[i] = arr[i + 1]
+// for (let i = 0; i < arr.length - 1; i++) {
+//     arr[i] = arr[i + 1]
+// }
+// arr[arr.length - 1] = firstIdx; 
+
+// Move Zeros
+
+const n = arr.length;
+
+const res = new Array(n);
+
+let i = 0;
+let j = n - 1;
+
+for (let k = 0; k < n; k++) {
+    if (arr[k] > 0) {
+        res[i++] = arr[k];
+    } else {
+        res[j--] = arr[k];
+    }
 }
-arr[arr.length - 1] = firstIdx; 
+
+return res;
+
+// solution two
+let result = []
+
+for (let num of arr) {
+    if (num == 1)
+        result.push(num);
+}
+
+for (let num of arr) {
+    if (num == 0)
+        result.push(num);
+
+}
+return result

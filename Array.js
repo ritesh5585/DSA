@@ -111,18 +111,86 @@ const arr = input
 // process the input exactly as provided and output
 // a single integer representing the computed sum.
 
-let ans = 0;
+// let ans = 0;
 
-for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-        let diff = arr[i] - arr[j];
+// for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//         let diff = arr[i] - arr[j];
 
-        if (diff < 0) {
-            diff = -diff;
-        }
+//         if (diff < 0) {
+//             diff = -diff;
+//         }
 
-        ans += diff;
-    }
-}
+//         ans += diff;
+//     }
+// }
 
-console.log(ans);
+// console.log(ans);
+
+//solution 2
+
+// const n = arr.length;
+// if (n <= 1) return 0;
+
+// arr.sort((x, y) => (x < y ? -1 : x > y ? 1 : 0));
+
+// let prefix = 0;
+// let ans = 0;
+
+// for (let i = 0; i < n; i++) {
+//     const ai = arr[i];
+//     ans += ai * i - prefix;
+//     prefix += ai;
+// }
+
+// console.log(ans)
+
+// Given an array of integers, update every element
+// with the multiplication of the previous and next
+// elements with the following exceptions: The first
+// element is replaced by the multiplication of the
+// first and second. The last element is replaced by
+// the multiplication of the last and second last.
+// Input Format First line: T (Number of test cases)
+// For each test case: First line: N (Size of array)
+// Second line: A[O] A[l] ... AIN-I] (Integer array
+// elements)
+
+// solution 1
+//    const n = arr.length;
+//     const result = [];
+
+//     for (let i = 0; i < n; i++) {
+
+//       if (i === 0) {
+//         result.push(arr[0] * arr[1]);
+//       }
+
+//       else if (i === n - 1) {
+//         result.push(arr[n - 1] * arr[n - 2]);
+//       }
+
+//       else {
+//         result.push(arr[i - 1] * arr[i + 1]);
+//       }
+//     }
+
+//     return result;
+
+// solution 2
+
+// const n = arr.length;
+
+// if (n === 1) return [arr[0]];
+
+// const res = new Array(n);
+
+// res[0] = arr[0] * arr[1];
+
+// for (let i = 1; i < n - 1; i++) {
+//     res[i] = arr[i - 1] * arr[i + 1];
+// }
+
+// res[n - 1] = arr[n - 1] * arr[n - 2];
+
+// return res;

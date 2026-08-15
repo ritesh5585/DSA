@@ -62,34 +62,67 @@ const arr = input
 
 // Move Zeros
 
-const n = arr.length;
+// const n = arr.length;
 
-const res = new Array(n);
+// const res = new Array(n);
 
-let i = 0;
-let j = n - 1;
+// let i = 0;
+// let j = n - 1;
 
-for (let k = 0; k < n; k++) {
-    if (arr[k] > 0) {
-        res[i++] = arr[k];
-    } else {
-        res[j--] = arr[k];
+// for (let k = 0; k < n; k++) {
+//     if (arr[k] > 0) {
+//         res[i++] = arr[k];
+//     } else {
+//         res[j--] = arr[k];
+//     }
+// }
+
+// return res;
+
+// // solution two
+// let result = []
+
+// for (let num of arr) {
+//     if (num == 1)
+//         result.push(num);
+// }
+
+// for (let num of arr) {
+//     if (num == 0)
+//         result.push(num);
+
+// }
+// return result
+
+// You are given a sequence of integers.Your task is
+// to compute the sum of absolute differences
+// between every pair of elements in the sequence
+// where the first element appears before the
+// second.More formally, for a given array of
+// integers arr of length n, you must compute the
+// total value: For all pairs(i, j) such that 0 s i < j < n,
+//     add larr[i] - arr[j]l to the sum.The absolute
+// difference between two numbers is defined as
+//     the non - negative value of their difference,
+//         regardless of order.The input may contain
+// duplicate values, negative numbers, or zeros.
+// The order of elements in the input is fixed and
+// must not be rearranged.Your program must
+// process the input exactly as provided and output
+// a single integer representing the computed sum.
+
+let ans = 0;
+
+for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+        let diff = arr[i] - arr[j];
+
+        if (diff < 0) {
+            diff = -diff;
+        }
+
+        ans += diff;
     }
 }
 
-return res;
-
-// solution two
-let result = []
-
-for (let num of arr) {
-    if (num == 1)
-        result.push(num);
-}
-
-for (let num of arr) {
-    if (num == 0)
-        result.push(num);
-
-}
-return result
+console.log(ans);

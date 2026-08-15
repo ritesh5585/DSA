@@ -194,3 +194,41 @@ const arr = input
 // res[n - 1] = arr[n - 1] * arr[n - 2];
 
 // return res;
+
+// You are given an array of even size. An array is
+// said to be balanced if: sum(left half) = =
+// sum (right half) Your task is to determine the
+// minimum value that must be added to exactly
+// ONE element (either in left half or right half) so
+// that the array becomes balanced. You may add
+// the value to any single element, but only one
+// addition operation is allowed. Return the
+// minimum value required to make the array
+// balanced.
+
+// solution 1
+
+// const n = arr.length;
+// const mid = n / 2;
+
+// let leftSum = 0;
+// let rightSum = 0;
+
+// for (let i = 0; i < mid; i++) {
+//     leftSum += arr[i];
+// }
+
+// for (let i = mid; i < n; i++) {
+//     rightSum += arr[i];
+// }
+
+// console.log( Math.abs(leftSum - rightSum))
+
+// Solution 2
+
+// const mid = Math.floor(arr.length / 2)
+// const leftSum = arr.slice(0, mid).reduce((a, b) => a + b, 0);
+// const rightSum = arr.slice(mid).reduce((a, b) => a + b, 0);
+
+// // Return absolute difference
+// return Math.abs(leftSum - rightSum);

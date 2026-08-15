@@ -12,8 +12,8 @@ const arr = input
 
 // for (let i = 1; i < arr.length; i++) {
 //     if (arr[i] > maxElement) {
-//         maxElement = arr[i]; 
-//         maxIndex = i; 
+//         maxElement = arr[i];
+//         maxIndex = i;
 //     }
 // }
 
@@ -26,7 +26,7 @@ const arr = input
 //     if (arr[i] > max) {
 //         secondMax = max;
 //         max = arr[i];
-//     } 
+//     }
 // }
 // console.log(secondMax)
 
@@ -58,7 +58,7 @@ const arr = input
 // for (let i = 0; i < arr.length - 1; i++) {
 //     arr[i] = arr[i + 1]
 // }
-// arr[arr.length - 1] = firstIdx; 
+// arr[arr.length - 1] = firstIdx;
 
 // Move Zeros
 
@@ -232,3 +232,23 @@ const arr = input
 
 // // Return absolute difference
 // return Math.abs(leftSum - rightSum);
+
+// Sort First Half Asce and Second Half Desc
+
+// const mid = Math.floor(arr.length / 2);
+
+// const left = [];
+// const right = [];
+
+// for (let i = 0; i < mid; i++) {
+//     left.push(arr[i]);
+// }
+
+// for (let i = mid; i < arr.length; i++) {
+//     right.push(arr[i]);
+// }
+
+// left.sort((a, b) => a - b);
+// right.sort((a, b) => b - a);
+
+// return left.concat(right);

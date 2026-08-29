@@ -260,13 +260,32 @@ let n = Number(prompt("Give your number here "))
 
 //  let square = n * n;
 //     let sumOfDigits = 0;
-    
+
 //     // Step 2: Loop to extract and sum digits
 //     while (square > 0) {
 //         let digit = square % 10;   // Get the last digit
 //         sumOfDigits += digit;      // Add to sum
 //         square = Math.floor(square / 10); // Remove last digit
 //     }
-    
+
 //     // Step 3: Compare with original number
 //     return sumOfDigits === n;
+
+
+var majorityElement = function (n) {
+     n = n.length
+
+    for (let i = 0; i < n; i++) {
+        let count = 0
+
+        for (let j = 0; j < n; j++) {
+            if (nums[i] === nums[j]) {
+                count++;
+            }
+        }
+
+        if (count > Math.floor(n / 2)) {
+            return nums[i];
+        }
+    };
+}

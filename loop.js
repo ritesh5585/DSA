@@ -272,20 +272,35 @@ let n = Number(prompt("Give your number here "))
 //     return sumOfDigits === n;
 
 
-var majorityElement = function (n) {
-     n = n.length
+// var majorityElement = function (n) {
+//      n = n.length
 
-    for (let i = 0; i < n; i++) {
-        let count = 0
+//     for (let i = 0; i < n; i++) {
+//         let count = 0
 
-        for (let j = 0; j < n; j++) {
-            if (nums[i] === nums[j]) {
-                count++;
+//         for (let j = 0; j < n; j++) {
+//             if (nums[i] === nums[j]) {
+//                 count++;
+//             }
+//         }
+
+//         if (count > Math.floor(n / 2)) {
+//             return nums[i];
+//         }
+//     };
+// }
+
+function twoSum(nums, target) {
+    // Loop 1: Pick the first number
+    for (let i = 0; i < nums.length; i++) {
+
+        // Loop 2: Pick a second number that comes AFTER the first one
+        for (let j = i + 1; j < nums.length; j++) {
+
+            // Check if these two numbers add up to the target
+            if (nums[i] + nums[j] === target) {
+                return [i, j]; // Found them! Return their indices
             }
         }
-
-        if (count > Math.floor(n / 2)) {
-            return nums[i];
-        }
-    };
+    }
 }

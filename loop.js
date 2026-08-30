@@ -304,3 +304,18 @@ function twoSum(nums, target) {
         }
     }
 }
+
+// more optimized way
+var twoSum = function(nums, target) {
+    let seen = new Map()
+
+    for(let i = 0; i < nums.length; i++){
+        let currentNum = nums[i]
+        let needed = target - currentNum
+
+        if(seen.has(needed)){
+            return [seen.get(needed),i]
+        }
+       seen.set(currentNum, i)
+    }
+};

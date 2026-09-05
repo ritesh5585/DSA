@@ -115,7 +115,7 @@ const arr = input
 
 // for (let i = 0; i < arr.length; i++) {
 //     for (let j = i + 1; j < arr.length; j++) {
-//         let diff = arr[i] - arr[j];
+//         let diff = arr[i] - arr[j]; or Math.abs(arr[i]- arr[j])
 
 //         if (diff < 0) {
 //             diff = -diff;
@@ -252,3 +252,4 @@ const arr = input
 // right.sort((a, b) => b - a);
 
 // return left.concat(right);
+

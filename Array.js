@@ -117,13 +117,62 @@ const arr = input
 //     for (let j = i + 1; j < arr.length; j++) {
 //         let diff = arr[i] - arr[j]; or Math.abs(arr[i]- arr[j])
 
-//         if (diff < 0) {
+//         if (diff < 0) { 
 //             diff = -diff;
 //         }
 
 //         ans += diff;
 //     }
 // }
+// solution 2
+
+//     sumOfAbsDiff(arr) {
+//         // Check if BigInt
+//         const isBigInt = arr.length > 0 && typeof arr[0] === 'bigint';
+
+//         if (isBigInt) {
+//             let sum = 0n;
+//             let prefixSum = 0n;
+
+//             for (let i = 0; i < arr.length; i++) {
+//                 sum += arr[i] * BigInt(i) - prefixSum;
+//                 prefixSum += arr[i];
+//             }
+
+//             return sum;
+//         } else {
+//             let sum = 0;
+//             let prefixSum = 0;
+
+//             for (let i = 0; i < arr.length; i++) {
+//                 sum += arr[i] * i - prefixSum;
+//                 prefixSum += arr[i];
+//             }
+
+//             return sum;
+//         }
+//     }
+
+// solution 3 
+
+// const n = arr.length;
+// if (n <= 1) return 0n;
+
+// // sort BigInt ascending
+// arr.sort((x, y) => (x < y ? -1 : x > y ? 1 : 0));
+
+// let prefix = 0n;
+// let ans = 0n;
+
+// for (let i = 0; i < n; i++) {
+//     const ai = arr[i];
+//     ans += ai * BigInt(i) - prefix;
+//     prefix += ai;
+// }
+
+// return ans;
+
+
 
 // console.log(ans);
 

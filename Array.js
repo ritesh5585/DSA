@@ -244,6 +244,22 @@ const arr = input
 
 // return res;
 
+//solution 3 
+
+// class Solution {
+//     multiplyPrevNext(arr) {
+//         const n = arr.length;
+//         if (n === 0) return [];
+//         if (n === 1) return [arr[0] * arr[0]];
+
+//         return arr.map((num, i) => {
+//             if (i === 0) return arr[0] * arr[1];
+//             if (i === n - 1) return arr[n - 2] * arr[n - 1];
+//             return arr[i - 1] * arr[i + 1];
+//         });
+//     }
+// }
+
 // You are given an array of even size. An array is
 // said to be balanced if: sum(left half) = =
 // sum (right half) Your task is to determine the
@@ -301,4 +317,3 @@ const arr = input
 // right.sort((a, b) => b - a);
 
 // return left.concat(right);
-

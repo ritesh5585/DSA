@@ -1,16 +1,11 @@
 let prompt = require("prompt-sync")()
 
 let str = prompt("enter your number")
-let reversed = ""
+console.log(str)
 
-// for(let i = 0; i <= str.length; i++){
-//     reversed = str[i] + reversed
-// }
-
-// for(let r in str){
-//     reversed = str[r] + reversed
-// }
+// books-
+// grokking algorithm by aditya bhargava
+// clean code by robert c martin
+// designing data intensive application by martin klappin
 
 
-
-console.log(reversed)

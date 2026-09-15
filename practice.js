@@ -39,22 +39,30 @@ function digitAnalyzer(str) {
 }
 // console.log(digitAnalyzer(str))
 
+// function comp(str) {
+//     if (!str || str.length === 0) return "";
+
+//     let result = [];
+//     let count = 1;
+
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === str[i + 1]) {
+//             count++;
+//         } else {
+//             result.push(`${str[i]}x${count}`);
+//             count = 1
+//         }
+//     }
+//     return result
+// }
+
 function comp(str) {
-    if (!str || str.length === 0) return "";
-
-    let result = [];
-    let count = 1;
-
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === str[i + 1]) {
-            count++;
-        } else {
-            result.push(`${str[i]}x${count}`);
-            count = 1
-        }
-    }
-    return result
+    return str
+        .match(/(\d)\1*/g)
+        .map(group => `${group[0]}x${group.length}`)  
 }
+
+
 
 console.log(comp(str))
 

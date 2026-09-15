@@ -21,20 +21,41 @@ function digitAnalyzer(str) {
 
         digit = i + 1
 
-        if (temp[i] % 2 == 0) {
-            evenDigit += temp[i]
-        }
-        else {
-            oddDigit += temp[i]
-        }
+        if (temp[i] % 2 == 0) evenDigit += temp[i]
+        else oddDigit += temp[i]
 
-        if (currentDigit > largestDigit) {
-            largestDigit = currentDigit;
-        }
+        if (currentDigit > largestDigit) largestDigit = currentDigit;
 
         sum += num
     }
+
+    for (const num of digits) {
+        sum += num;
+        if (num % 2 === 0) evenDigit++;
+        else oddDigit++;
+        if (num > largestDigit) largestDigit = num;
+    }
     return { sum, digit, evenDigit, oddDigit, largestDigit }
 }
-console.log(digitAnalyzer(str))
+// console.log(digitAnalyzer(str))
+
+function comp(str) {
+    if (!str || str.length === 0) return "";
+
+    let result = [];
+    let count = 1;
+
+    for (let i = 0; i < str.length; i++) {
+        // ✅ Next character same hai?
+        if (str[i] === str[i + 1]) {
+            count++;
+        } else {
+            // ✅ Different character mila → save karo
+            result.push(`${str[i]}x${count}`);
+            count = 1;  // Reset
+        }
+    }
+}
+
+console.log(comp(str))
 

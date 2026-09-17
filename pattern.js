@@ -25,10 +25,10 @@ let n = Number(prompt("Give your number here "))
 // Inverted Right Triangle -
 //     Star Pattern
 
-for (let i = n; i >= 1; i--) {
-    for (let j = 1; j <= i; j++) {
-        process.stdout.write("* ");
-    }
-    console.log();
-}
+// for (let i = n; i >= 1; i--) {
+//     for (let j = 1; j <= i; j++) {
+//         process.stdout.write("* ");
+//     }
+//     console.log();
+// }
 

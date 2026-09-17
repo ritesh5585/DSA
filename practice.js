@@ -6,7 +6,7 @@ let prompt = require("prompt-sync")()
 // clean code by robert c martin
 // designing data intensive application by martin klappin
 
-// 1. digit analyzer 
+// 1. digit analyzer
 // function digitAnalyzer(str) {
 //     let temp = str
 //     let sum = 0
@@ -59,40 +59,53 @@ let prompt = require("prompt-sync")()
 // function comp(str) {
 //     return str
 //         .match(/(\d)\1*/g)
-//         .map(group => `${group[0]}x${group.length}`)  
+//         .map(group => `${group[0]}x${group.length}`)
 // }
 
 
 
 // console.log(comp(str))
 
-let arr = [100, 250, 500, 150, 700]
-let temp = arr
-let ans = temp.filter(amt => amt > 300)
-// console.log(ans)
+// let arr = [100, 250, 500, 150, 700]
+// let temp = arr
+// let ans = temp.filter(amt => amt > 300)
+// // console.log(ans)
 
-let marks = [80, 90, 85, 70, 95]
-let length = marks.length
+// let marks = [80, 90, 85, 70, 95]
+// let length = marks.length
 
-let total = marks.reduce((arr, acc) => arr + acc, 0)
-// console.log(total/length)
+// let total = marks.reduce((arr, acc) => arr + acc, 0)
+// // console.log(total/length)
 
-let num = [1, 2, 3, 2, 4, 2, 5, 1, 1, 1]
-let count = {}
-let max = 0
-let second
+// let num = [1, 2, 3, 2, 4, 2, 5, 1, 1, 1]
+// let count = {}
+// let max = 0
+// let second
 
-for (let i = 0; i <= num.length; i++) {
-    if(count[num[i]]){
-        count[num[i]]++
-    }else{
-        count[num[i]] = 1
-    }
-    for(let key in count){
-       if(count[key] > max){
-        max = count[key]
-        second = key
-       }
-    }
-}
-console.log(second)
+// for (let i = 0; i <= num.length; i++) {
+//     if(count[num[i]]){
+//         count[num[i]]++
+//     }else{
+//         count[num[i]] = 1
+//     }
+//     for(let key in count){
+//        if(count[key] > max){
+//         max = count[key]
+//         second = key
+//        }
+//     }
+// }
+// console.log(second)
+
+//         let sum = 0
+//         let temp = n
+
+//         while( temp > 0) {
+//             sum += temp % 10
+//            temp = Math.floor(temp / 10);
+//         }
+//         if (n % sum === 0) {
+//         return "Harshad Number";
+//     } else {
+//         return "Not Harshad Number";
+//     }

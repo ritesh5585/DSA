@@ -1,5 +1,12 @@
 let prompt = require("prompt-sync")()
 
+let input = prompt('whats in your mind- ')
+const arr = input
+    .split(",")
+    .map((value) => Number(value.trim()))
+    .filter((n) => !Number.isNaN(n));
+console.log(arr)
+
 // let str = prompt("enter your number").trim()
 // books-
 // grokking algorithm by aditya bhargava
@@ -71,41 +78,50 @@ let prompt = require("prompt-sync")()
 // let ans = temp.filter(amt => amt > 300)
 // // console.log(ans)
 
-// let marks = [80, 90, 85, 70, 95]
-// let length = marks.length
+// let marks = [100, 250, 500, 150, 700]
 
-// let total = marks.reduce((arr, acc) => arr + acc, 0)
-// // console.log(total/length)
+// let temp = marks
 
-// let num = [1, 2, 3, 2, 4, 2, 5, 1, 1, 1]
-// let count = {}
-// let max = 0
-// let second
+// let ans = temp.reduce((acc, sum) => acc + sum, 0)
+// console.log(ans/marks.length)
 
-// for (let i = 0; i <= num.length; i++) {
-//     if(count[num[i]]){
-//         count[num[i]]++
-//     }else{
-//         count[num[i]] = 1
-//     }
-//     for(let key in count){
-//        if(count[key] > max){
-//         max = count[key]
-//         second = key
-//        }
-//     }
-// }
-// console.log(second)
+// find the count of numbers from the array
 
-//         let sum = 0
-//         let temp = n
+let temp = arr
 
-//         while( temp > 0) {
-//             sum += temp % 10
-//            temp = Math.floor(temp / 10);
-//         }
-//         if (n % sum === 0) {
-//         return "Harshad Number";
-//     } else {
-//         return "Not Harshad Number";
-//     }
+const countArray = (temp) => {
+    return temp.reduce((acc, num) => {
+        acc[num] = (acc[num] || 0) + 1
+        return acc
+    }, {})
+}
+
+const counting = (temp) => {
+    let count = {}
+    for (num of temp) {
+        if (count[num]) {
+            count[num]++
+        } else {
+            count[num] = 1
+        }
+    }
+    return count
+}
+
+console.log(counting(temp))
+
+const countBruteForce = (temp) => {
+    let result = {}
+
+    for(let i = 0; i < temp.length; i++){
+        let element = arr[i]
+        if(result(element)){
+            result(element)++
+        }else{
+            result(element) = 1
+        }
+        return result
+    }
+}
+
+console.log(counting(temp))
